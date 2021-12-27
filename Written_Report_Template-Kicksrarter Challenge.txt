@@ -1,0 +1,42 @@
+# Kickstarting with Excel
+## Overview of Project
+Louis is very close to her fundraising goal for her play, Fever. Now, she wants to do an analysis on how well other "Play" campaigns had performed in relation to their launch dates and funding goals.
+
+### Purpose
+Doing so will help her do an analysis to see which had been the best month to launch, and how should she position her goal to be successful with her campaign.  
+
+## Analysis and Challenges
+As a first step, took an overview of data and tried to understand the universe and generate insights. Data had many parent and subcategories. Of those, steps were taken at various times to include only "Plays" subcategory under the "Theater" parent category. Reason for filtering on this criterion was to keep the data consistent for analysis. Text to Columns Excel functionality was leveraged to separate subcategories from the Parent category. 
+
+### Analysis of Outcomes Based on Launch Date
+Upon looking at the data, Launch Date data was expressed in Timestamps. To get to the Exact Launch date and their corresponding years, first these timestamps were converted to dates using a conversion formula as performed on Excel. Post that, an additional column for ‘Years’ was extracted from the launch date. That’s how data was prepared in Excel.
+To do further analysis on Launch date, pivot table was created. While creating the pivot, month wise analysis was to be done to see which month yielded the best/worst results by Launch Dates. To get to the months, another excel functionality was to be used to split data month wise.
+### Analysis of Outcomes Based on Goals
+A data set was created with specific ranges. To analyze the outcomes, COUNTIFS was used to calculate data using three specified criteria of outcomes, goals and plays. After that, percentages of successful, failed and canceled outcomes were plotted on the line chart.
+
+### Challenges and Difficulties Encountered
+Selecting the data set. Upon clicking Insert  Pivot Table, sometimes complete data set would not get selected. Overcame this by altering data source under PivotTable Analyze  Change Data Source.
+c: Prepared data using COUNTIFS. That was required to draw conclusions for the goals based on ranges.
+Challenge- Took some time to get a handle on the formula and get results correctly.
+Took some time to figure how to change colors on the charts and exclude some data elements in pivot from charting.
+
+## Results
+
+- What are two conclusions you can draw about the Outcomes based on Launch Date?
+Conclusion 1: Total number of Theater campaigns were highest in the month of May and June, 166 and 153 respectively. The highest number of successful campaigns were also within these two months. Another interesting observation is in the month of May. It had the highest number of successful and failed campaigns throughout the year.
+Conclusion 2: Beginning of the year in January were the highest number of Theater campaign cancelations (7). Overall Range of canceled campaigns is very low. Month of Oct did not have any canceled Theatre Campaigns.
+
+- What can you conclude about the Outcomes based on Goals?
+Conclusion 1: Campaigns for the Plays under $1000 had the highest level of success rate; which is approximately 76%. Campaigns in the range of $(45,000-49,999) failed the most, i.e. 100%.
+There were no cancelations for “Play” subcategory based on goals.
+
+- What are some limitations of this dataset?
+While calculating Average Donation, some columns were throwing errors as Division by zero is not a valid calculation. To overcome the same, IFERROR formula was used to debug.
+- What are some other possible tables and/or graphs that we could create?
+Possibilities for analysis are endless. Analysis can be performed based on:
+-	Pledged Amount
+-	Country wise analysis (for example Great Britain, or any other country) where Louis wants to expand.
+-	Deadline date
+-	Other subcategories of Theater.
+-	Other Parent Categories.
+
